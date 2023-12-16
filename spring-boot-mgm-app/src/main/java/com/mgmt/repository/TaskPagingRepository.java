@@ -7,5 +7,5 @@ import com.mgmt.entity.Task;
 
 @Repository
 public interface TaskPagingRepository extends PagingAndSortingRepository<Task, Long>{
-			
+		
 }

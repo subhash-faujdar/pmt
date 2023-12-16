@@ -20,7 +20,7 @@ import com.mgmt.repository.TaskRepository;
 
 @Service
 public class TaskServiceImpl implements TaskService{
-
+ 
 	@Autowired
 	TaskRepository taskRepository;
 	

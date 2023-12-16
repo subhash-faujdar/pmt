@@ -19,7 +19,7 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long project_id;
 	
-	@Column(nullable = false)
+	@Column(nullable = false) 
 	private String project_description;
 	
 	@OneToMany(cascade = CascadeType.ALL)

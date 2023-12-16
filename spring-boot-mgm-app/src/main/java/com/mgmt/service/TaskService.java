@@ -22,6 +22,6 @@ public interface TaskService {
 	
 	public Map<String, Boolean> deleteTask(Long id);
 	
-	public List<Task> getSortedTasks(Integer pageNo, Integer pageSize, String sortBy);
+	public List<Task> getSortedTasks(Integer pageNo, Integer pageSize, String sortBy); 
 	
 }

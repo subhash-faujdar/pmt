@@ -7,6 +7,5 @@ import com.mgmt.entity.Project;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long>{
-	
-	
+		
 }
