@@ -11,10 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import com.mgmt.entity.Project;
 import com.mgmt.entity.Task;
 import com.mgmt.exception.ResourceNotFoundException;
-import com.mgmt.repository.ProjectRepository;
 import com.mgmt.repository.TaskPagingRepository;
 import com.mgmt.repository.TaskRepository;
 
@@ -25,9 +23,6 @@ public class TaskServiceImpl implements TaskService{
 	TaskRepository taskRepository;
 	
 	@Autowired
-	ProjectRepository projectRepository;
-	
-	@Autowired
 	TaskPagingRepository taskPagingRepository;
 	
 	@Override
@@ -35,19 +30,10 @@ public class TaskServiceImpl implements TaskService{
 		return taskRepository.findAll();
 	}
 	
-	@Override
-	public List<Project> getAllProjects(){
-		return projectRepository.findAll();
-	}
-	
+		
 	@Override
 	public Task saveTask(Task task) {
 		return taskRepository.save(task);
-	}
-	
-	@Override
-	public Project saveProject(Project project) {
-		return projectRepository.save(project);
 	}
 	
 	@Override

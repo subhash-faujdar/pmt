@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mgmt.entity.Project;
 import com.mgmt.entity.Task;
 import com.mgmt.service.TaskService;
 
@@ -37,14 +36,6 @@ public class TaskController {
 			return taskService.getAllTasks();
 		}	
 		
-		/**
-		 * Get all projects
-		 * @return List of all projects
-		 */
-		@GetMapping("/projects")
-		public List<Project> getAllProjects(){
-			return taskService.getAllProjects();
-		}
 
 		/**
 		 * Creates new task
@@ -57,15 +48,7 @@ public class TaskController {
 		}
 		
 		/**
-		 * Creates new project along with the tasks 
-		 * @param project
-		 * @return
-		 */
-		@PostMapping("/project")
-		public Project createProject(@RequestBody Project project) {
-			return taskService.saveProject(project);
-		}
-		
+
 		/**
 		 * Retrieve task details by it's id
 		 * @param id
